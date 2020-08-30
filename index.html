@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>My Contacts</title>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	 <link href="https://fonts.googleapis.com/css?family=Gugi|Orbitron|Lobster|Josefin Sans|Changa|Poppins|Roboto|Raleway|Ranga" rel="stylesheet">
+</head>
+<body>
+	<section class="columns_2">
+		<div class="about_me">
+
+			<div class="about_me__my_info">
+				<div class="about_me__photo_con">
+					<img id="photo_abou_me" src="https://m.media-amazon.com/images/M/MV5BNWUyZTgzZDctYzg3Yi00NmViLWE4NzItMmM0NTFmYjZmZGRjXkEyXkFqcGdeQXVyNjg3MTIwODI@._V1_.jpg">
+				</div>
+				<h2 class="my_name__about_me">Grisha Zolot</h2>
+				<p class="who__about_me">Created by Fen1um</p>
+			</div>
+
+			<div class="about_me__sections_menu">
+				<div class="choice__about_me__sections_menu active"> <span class="material-icons margin_right_20 Outlined">home</span>Home</div>
+				<div class="choice__about_me__sections_menu"><span class="material-icons margin_right_20">book</span>Contacts</div>
+				<div class="choice__about_me__sections_menu"><span class="material-icons margin_right_20">favorite</span>Favourites</div>
+				<div class="choice__about_me__sections_menu"><span class="material-icons margin_right_20">supervisor_account</span>People</div>
+				<div class="choice__about_me__sections_menu"><span class="material-icons margin_right_20">business</span>Companies</div>
+			</div>
+
+			<div class="about_me__settings">
+				<div class="settings__about_me__settings hovered"><span class="material-icons icons__about_me__settings">settings</span>Settings</div>
+				<div class="settings__about_me__settings"><span class="material-icons icons__about_me__settings">exit_to_app</span>Log Out</div>
+			</div>
+		</div>
+		<div class="my_contacts">
+			<div class="my_contacts__header">
+				<div class="search_and_close__my_contacts">
+					<div class="close__search_and_close__my_contacts" onclick="close_column1(this)"></div>
+					<!-- <div class="search__search_and_close__my_contacts">
+						<span class="material-icons icon_search__search__search_and_close__my_contacts">search</span>
+						<input class="real_search__search__search_and_close__my_contacts" placeholder="Search..." type="text" name="searc" autocomplete="off">
+					</div> -->
+					<div class="add_new_contact__header" onclick="open_creator(this)">
+						<div class="circle__add_new_contact__header"></div>
+						<div class="p__add_new_contact__header">Add New Contact</div>
+					</div>
+				</div>
+				<div class="who_am_i__my_contacts">
+					<div class="welcome__who_am_i__my_contacts">
+						<div class="photo_or_2_letters__who_am_i__my_contacts">GZ</div>
+						<div class="my_name__who_am_i__my_contacts">
+							<p class="greetings__welcome__who_am_i__my_contacts">Welcome,</p>
+							Grisha Zolot
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="my_contacts__main_nav">
+				<div class="main_h1_and_selector__my_contacts__main_nav">
+					
+					<h2 class="main_h1__my_contacts__main_nav">Contacts</h2>
+					<div class="selector__my_contacts__main_nav">
+						<div class="select__my_contacts__main_nav" onclick="change_mode_type()">
+							<span class="material-icons icon__select__my_contacts__main_nav active" id='table_style_type_enable'>dashboard</span>
+							<p class="p__select__my_contacts__main_nav">Table</p>
+						</div>
+						<div class="select__my_contacts__main_nav" onclick="change_mode_type()">
+							<span class="material-icons icon__select__my_contacts__main_nav" id='list_style_type_enable'>subject</span>
+							<p class="p__select__my_contacts__main_nav">List</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="location__my_contacts__main_nav">
+					<span class="material-icons icon__location__my_contacts__main_nav">location_on</span>
+					<div onclick="openc_select(this)" class="container__selector__location__my_contacts__main_nav">
+						<input id='input_change_format' class="input__location__my_contacts__main_nav" type="text" name="" value="From Anywhere" disabled="true">
+						<div class="all_selects__location__my_contacts__main_nav">
+							<div class="option__selector__location"  onclick="select_option(this)">From Anywhere</div>
+							<div class="option__selector__location"  onclick="select_option(this)">Ukraine, Lviv</div>
+							<div class="option__selector__location"  onclick="select_option(this)">Ukraine, Kyiv</div>
+							<div class="option__selector__location"  onclick="select_option(this)">Ukraine, Odesa</div>
+							<div class="option__selector__location"  onclick="select_option(this)">Ukraine, Uzgorod</div>
+							<div class="option__selector__location"  onclick="select_option(this)">Ukraine, Kharkiw</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="border__my_contacts">
+				<div class="general__border__my_contacts">
+				</div>
+			</div>
+			<div  class="my_contacts__general">
+
+				 <div class="center__my_contacts__general">
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<section class="contact_creator blure16 display_none">
+		<div class="back__creator" onclick="back_now(this)">
+			<span class="material-icons arrow_back_ios_back">arrow_back_ios</span>Back
+		</div>
+		<form enctype="multipart/form-data"  class="form_add">
+			<div class="header__form">
+				<p class="p__header__form">Create a new one</p>
+				<div class="triangle__header__form"></div>
+			</div>
+			<div class="main__form">
+				<div class="photo__form">
+					<div class="container_photo_form">
+						<input type="file" id="input_id_photo" class="input_ch__photo_container_change_content_changes" name="image" onchange="previewFile(this)">
+                   		<img img_s='' class="turned_off" src="" alt="" id="img__photo_container_change_content_changes">
+						<svg id="svg__menu__choice" class='svg__menu__choice' viewBox="0 0 512 512">
+					      <path d="M101 41H71c-16.569 0-30 13.431-30 30h90c0-16.569-13.431-30-30-30z" />
+					      <path d="M457 101H356.812l-9.743-29.23A44.946 44.946 0 00304.377 41h-96.754a44.943 44.943 0 00-42.691 30.77L155.188 101H55c-30.327 0-55 24.673-55 55v260c0 30.327 24.673 55 55 55h402c30.327 0 55-24.673 55-55V156c0-30.327-24.673-55-55-55zM51 156c0-8.284 6.716-15 15-15h30c8.284 0 15 6.716 15 15s-6.716 15-15 15H66c-8.284 0-15-6.716-15-15zm205 265c-79.953 0-145-65.047-145-145s65.047-145 145-145 145 65.047 145 145-65.047 145-145 145zm180-250c-8.284 0-15-6.716-15-15s6.716-15 15-15 15 6.716 15 15-6.716 15-15 15z" />
+					      <path d="M256 161c-63.411 0-115 51.589-115 115s51.589 115 115 115 115-51.589 115-115-51.589-115-115-115zm0 195c-44.112 0-80-35.888-80-80s35.888-80 80-80 80 35.888 80 80-35.888 80-80 80z" />
+					      <circle/>
+					    </svg>
+					</div>
+				</div>
+				<div class="inputs__form">
+					<input required  placeholder="Name" class="input_common_form input_form_new_contact" type="text" name="name">
+					<input required placeholder="Work" class="input_common_form input_form_new_contact" type="text" name="work">
+					<div onclick="openc_select(this)" class="container_for_selector__form">
+						<input required placeholder="Location" class="location_form_input input_form_new_contact" type="text" name="location" disabled="true">
+						<div class="selector_con_form z-index120">
+							<div class="option_form"  onclick="select_option(this)">Ukraine, Lviv</div>
+							<div class="option_form"  onclick="select_option(this)">Ukraine, Kyiv</div>
+							<div class="option_form"  onclick="select_option(this)">Ukraine, Odesa</div>
+							<div class="option_form"  onclick="select_option(this)">Ukraine, Uzgorod</div>
+							<div class="option_form"  onclick="select_option(this)">Ukraine, Kharkiw</div>
+						</div>
+					</div>
+					<div class="container_for_selector__form">
+						<p onclick="openc_select_links(this)" class="location_form_input p_socials">Socials</p>
+						<div class="selector_con_form socials selector_con_form_soc">
+							<input placeholder="Instagram" class="mini_input__socials_form input_form_new_contact" type="text" name='instagram'>
+							<input placeholder="Facebook" class="mini_input__socials_form input_form_new_contact" type="text" name='facebook'>
+							<input placeholder="Twitter" class="mini_input__socials_form input_form_new_contact" type="text" name='twitter'>
+							<input placeholder="LinkEdin" class="mini_input__socials_form input_form_new_contact" type="text" name='link'>
+						</div>
+					</div>
+					<button class="buttonn_form">Create</button>
+				</div>
+			</div>
+		</form>
+	</section>
+	<section class="error_alert enbled_error">
+		<div class="circle_alert">
+			<div class="small_circle_alert"></div>
+		</div>
+		<p class="p_alert">You can't delete favorite contact</p>
+	</section>
+
+	
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
+
